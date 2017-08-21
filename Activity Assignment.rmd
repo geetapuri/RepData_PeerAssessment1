@@ -4,7 +4,8 @@
 activity <- read.csv("activity.csv")
 ```
 
-## Mean and median total number of steps taken per day and histogram plotting
+## Mean and median total number of steps taken per day and histogram plotting  
+
 ```{r}
 steps_per_day <- aggregate(steps~date, activity, sum)
 hist(steps_per_day$steps, main=paste("Total Steps each Day"), col="red", xlab="Num of steps per day")
@@ -14,7 +15,8 @@ median_steps <- median(steps_per_day$steps)
 
 Mean steps are `r mean_steps` and median steps are `r median_steps`
 
-##Average daily activity pattern
+##Average daily activity pattern  
+
 
 Time series plot : Avg steps vs interval
 
@@ -31,7 +33,7 @@ max_interval <- steps_per_interval[which.max(steps_per_interval$steps),]
 
 The interval number `r max_interval$interval` has max steps
 
-##Missing values 
+##Missing values  
 
 1. Total number of missing values : 
 
